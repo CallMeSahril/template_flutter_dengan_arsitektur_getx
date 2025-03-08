@@ -1,16 +1,53 @@
-# template_flutter_dengan_arsitektur_getx
+# Template Flutter dengan Arsitektur GetX
 
-A new Flutter project.
+Template ini menggunakan arsitektur GetX untuk pengembangan aplikasi Flutter. Template ini dirancang untuk memudahkan pengembangan aplikasi dengan struktur yang rapi dan terorganisir.
 
-## Getting Started
+## Fitur
 
-This project is a starting point for a Flutter application.
+- **GetX State Management**: Menggunakan GetX untuk manajemen state yang efisien.
+- **Modular Structure**: Struktur proyek yang modular untuk memudahkan pengelolaan kode.
+- **Responsive UI**: Desain antarmuka yang responsif untuk berbagai ukuran layar.
+- **Routing**: Pengaturan routing yang mudah dengan GetX.
 
-A few resources to get you started if this is your first Flutter project:
+## Struktur Proyek
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+```
+lib/
+├── models/
+├── views/
+├── bindings/
+├── routes/
+├── utils/
+└── main.dart
+```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- **controllers/**: Berisi semua controller untuk manajemen state.
+- **models/**: Berisi semua model data.
+- **views/**: Berisi semua widget dan halaman UI.
+- **bindings/**: Berisi binding untuk menghubungkan controller dengan view.
+- **routes/**: Berisi pengaturan routing aplikasi.
+- **utils/**: Berisi utilitas dan helper functions.
+- **main.dart**: Entry point aplikasi.
+
+## Cara Menggunakan
+
+1. Clone repository ini.
+    ```bash
+    git clone <repository-url>
+    ```
+2. Install dependencies.
+    ```bash
+    flutter pub get
+    ```
+3. Jalankan aplikasi.
+    ```bash
+    flutter run
+    ```
+
+## Kontribusi
+
+Kontribusi sangat diterima! Silakan fork repository ini dan buat pull request untuk perubahan yang ingin Anda ajukan.
+
+## Lisensi
+
+Template ini dilisensikan di bawah [MIT License](LICENSE).
