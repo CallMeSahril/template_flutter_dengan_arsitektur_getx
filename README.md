@@ -59,7 +59,7 @@ lib
 Beberapa package yang digunakan dalam proyek ini:
 - `flutter`
 - `get`
-- `http` (jika ada API call)
+- `dio` (jika ada API call)
 
 Pastikan semua dependencies telah terinstal sebelum menjalankan aplikasi.
 
