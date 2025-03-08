@@ -4,9 +4,13 @@ part of 'app_pages.dart';
 abstract class Routes {
   Routes._();
   static const HOME = _Paths.HOME;
+  static const PRODUCTS = _Paths.PRODUCTS;
+  static const TRANSACTION = _Paths.TRANSACTION;
 }
 
 abstract class _Paths {
   _Paths._();
   static const HOME = '/home';
+  static const PRODUCTS = '/products';
+  static const TRANSACTION = '/transaction';
 }
