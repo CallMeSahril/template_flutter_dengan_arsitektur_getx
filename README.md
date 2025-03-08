@@ -1,53 +1,71 @@
-# Template Flutter dengan Arsitektur GetX
+# Project Overview
+Proyek ini adalah aplikasi berbasis Flutter yang menggunakan arsitektur modular dengan bantuan GetX untuk manajemen state dan dependensi. Struktur proyek telah diatur sedemikian rupa agar mudah dikelola dan dikembangkan.
 
-Template ini menggunakan arsitektur GetX untuk pengembangan aplikasi Flutter. Template ini dirancang untuk memudahkan pengembangan aplikasi dengan struktur yang rapi dan terorganisir.
-
-## Fitur
-
-- **GetX State Management**: Menggunakan GetX untuk manajemen state yang efisien.
-- **Modular Structure**: Struktur proyek yang modular untuk memudahkan pengelolaan kode.
-- **Responsive UI**: Desain antarmuka yang responsif untuk berbagai ukuran layar.
-- **Routing**: Pengaturan routing yang mudah dengan GetX.
-
-## Struktur Proyek
+## Struktur Direktori
 
 ```
-lib/
-├── models/
-├── views/
-├── bindings/
-├── routes/
-├── utils/
-└── main.dart
+lib
+├── app
+│   ├── data
+│   │   ├── products
+│   │   │   ├── product_model.dart
+│   │   │   ├── product_service.dart
+│   │   │   ├── product_service_interface.dart
+│   │   ├── response
+│   │   │   ├── response_model.dart
+│   ├── modules
+│   │   ├── products
+│   │   │   ├── bindings
+│   │   │   │   ├── products_binding.dart
+│   │   │   ├── controllers
+│   │   │   │   ├── products_controller.dart
+│   │   │   ├── view
+│   │   │   │   ├── products_view.dart
+│   │   ├── transaction
+│   │   │   ├── bindings
+│   │   │   │   ├── products_binding.dart
+│   │   │   ├── controllers
+│   │   │   │   ├── products_controller.dart
+│   │   │   ├── view
+│   │   │   │   ├── products_view.dart
+│   ├── routes
+│   │   ├── app_pages.dart
+│   │   ├── app_routes.dart
+├── main.dart
 ```
 
-- **controllers/**: Berisi semua controller untuk manajemen state.
-- **models/**: Berisi semua model data.
-- **views/**: Berisi semua widget dan halaman UI.
-- **bindings/**: Berisi binding untuk menghubungkan controller dengan view.
-- **routes/**: Berisi pengaturan routing aplikasi.
-- **utils/**: Berisi utilitas dan helper functions.
-- **main.dart**: Entry point aplikasi.
+## Penjelasan Folder & File
+- **`data`**: Berisi model dan service untuk data yang digunakan dalam aplikasi.
+  - `products`: Berisi model dan service terkait produk.
+  - `response`: Berisi model untuk menangani response dari API.
+- **`modules`**: Berisi modul-modul utama aplikasi.
+  - `products`: Modul yang menangani fitur terkait produk.
+  - `transaction`: Modul yang menangani fitur transaksi.
+- **`routes`**: Berisi konfigurasi rute aplikasi.
+  - `app_pages.dart`: Berisi daftar halaman dalam aplikasi.
+  - `app_routes.dart`: Berisi konstanta nama rute.
+- **`main.dart`**: Entry point utama aplikasi Flutter.
 
-## Cara Menggunakan
+## Cara Menjalankan Proyek
+1. Pastikan sudah menginstal Flutter dan memiliki environment yang sesuai.
+2. Clone repository ini.
+3. Jalankan perintah berikut di terminal:
+   ```sh
+   flutter pub get
+   flutter run
+   ```
 
-1. Clone repository ini.
-    ```bash
-    git clone <repository-url>
-    ```
-2. Install dependencies.
-    ```bash
-    flutter pub get
-    ```
-3. Jalankan aplikasi.
-    ```bash
-    flutter run
-    ```
+## Dependencies
+Beberapa package yang digunakan dalam proyek ini:
+- `flutter`
+- `get`
+- `http` (jika ada API call)
+
+Pastikan semua dependencies telah terinstal sebelum menjalankan aplikasi.
 
 ## Kontribusi
-
-Kontribusi sangat diterima! Silakan fork repository ini dan buat pull request untuk perubahan yang ingin Anda ajukan.
+Jika ingin berkontribusi, silakan buat branch baru dan ajukan pull request.
 
 ## Lisensi
+Proyek ini menggunakan lisensi [MIT](LICENSE).
 
-Template ini dilisensikan di bawah [MIT License](LICENSE).
